@@ -1,0 +1,24 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# C++ compiled output
+backend/phonebook.so
+backend/phonebook.dll
+backend/phonebook.dylib
+*.o
+*.obj
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/settings.json
+.vscode/launch.json
+
+# Demo (large files)
+demo-video/*.mp4

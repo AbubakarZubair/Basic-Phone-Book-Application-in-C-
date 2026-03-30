@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PhoneBook Pro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo-block">
+      <span class="logo-icon">📞</span>
+      <div>
+        <h1 class="logo-title">PHONEBOOK <span class="accent">PRO</span></h1>
+        <p class="logo-sub">C++ POWERED · REST API · v2.0.0</p>
+      </div>
+    </div>
+    <div class="status-bar">
+      <span class="dot pulse"></span>
+      <span id="status-text">CONNECTING…</span>
+      <span class="divider">|</span>
+      <span id="contact-count">-- CONTACTS</span>
+    </div>
+  </header>
+
+  <!-- Main Grid -->
+  <main class="grid">
+
+    <!-- ── Left Panel: Add / Search ── -->
+    <section class="panel panel-left">
+
+      <!-- ADD CONTACT -->
+      <div class="card" id="card-add">
+        <h2 class="card-title"><span class="num">01</span> ADD CONTACT</h2>
+        <div class="field-group">
+          <label>NAME</label>
+          <input type="text" id="add-name" placeholder="John Doe" autocomplete="off"/>
+        </div>
+        <div class="field-group">
+          <label>PHONE</label>
+          <input type="text" id="add-phone" placeholder="+1 555 0100" autocomplete="off"/>
+        </div>
+        <button class="btn btn-primary" onclick="addContact()">⊕ ADD CONTACT</button>
+      </div>
+
+      <!-- SEARCH -->
+      <div class="card" id="card-search">
+        <h2 class="card-title"><span class="num">02</span> SEARCH</h2>
+        <div class="toggle-row">
+          <button class="toggle-btn active" id="toggle-name" onclick="setSearchMode('name')">BY NAME</button>
+          <button class="toggle-btn" id="toggle-phone" onclick="setSearchMode('phone')">BY PHONE</button>
+        </div>
+        <div class="field-group">
+          <label id="search-label">NAME</label>
+          <input type="text" id="search-input" placeholder="Search…" autocomplete="off"/>
+        </div>
+        <button class="btn btn-secondary" onclick="searchContact()">⌕ SEARCH</button>
+      </div>
+
+      <!-- UPDATE -->
+      <div class="card" id="card-update">
+        <h2 class="card-title"><span class="num">03</span> UPDATE</h2>
+        <div class="field-group">
+          <label>CURRENT NAME</label>
+          <input type="text" id="upd-old" placeholder="Existing name" autocomplete="off"/>
+        </div>
+        <div class="field-group">
+          <label>NEW NAME</label>
+          <input type="text" id="upd-name" placeholder="New name" autocomplete="off"/>
+        </div>
+        <div class="field-group">
+          <label>NEW PHONE</label>
+          <input type="text" id="upd-phone" placeholder="New phone" autocomplete="off"/>
+        </div>
+        <button class="btn btn-secondary" onclick="updateContact()">↻ UPDATE</button>
+      </div>
+
+    </section>
+
+    <!-- ── Right Panel: Contacts Table ── -->
+    <section class="panel panel-right">
+      <div class="table-header">
+        <h2 class="card-title"><span class="num">04</span> ALL CONTACTS</h2>
+        <div class="table-actions">
+          <button class="btn btn-sm" onclick="loadContacts()">↺ REFRESH</button>
+          <button class="btn btn-danger" onclick="deleteAll()">✕ DELETE ALL</button>
+        </div>
+      </div>
+
+      <!-- Toast -->
+      <div id="toast" class="toast hidden"></div>
+
+      <!-- Table -->
+      <div class="table-wrapper">
+        <table class="contacts-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>NAME</th>
+              <th>PHONE</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody id="contacts-body">
+            <tr><td colspan="4" class="empty-row">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Terminal log -->
+      <div class="terminal">
+        <div class="terminal-header">› SYSTEM LOG</div>
+        <div id="log" class="log-body"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
