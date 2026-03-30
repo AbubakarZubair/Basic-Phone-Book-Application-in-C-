@@ -43,7 +43,7 @@ sudo apt update && sudo apt install g++ build-essential -y
 ## 📥 Step 1 — Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/phonebook-pro.git
+git clone https://github.com/AbubakarZubair/Basic-Phone-Book-Application-in-C-.git
 cd phonebook-pro
 ```
 
