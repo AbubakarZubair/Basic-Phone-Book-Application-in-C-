@@ -75,7 +75,7 @@ phonebook-pro/
 
 ```bash
 # 1. Clone
-git clone https://github.com/YOUR_USERNAME/phonebook-pro.git
+git clone https://github.com/AbubakarZubair/Basic-Phone-Book-Application-in-C-.git
 cd phonebook-pro
 
 # 2. Create virtual environment & install deps
@@ -137,7 +137,7 @@ Interactive docs: **http://127.0.0.1:8000/docs**
 
 ## 🔗 GitHub
 
-> **https://github.com/YOUR_USERNAME/phonebook-pro**
+> **https://github.com/AbubakarZubair/Basic-Phone-Book-Application-in-C-.git**
 
 ---
 
@@ -149,6 +149,6 @@ MIT License — free to use, modify, and distribute.
 
 ## 👤 Author
 
-**Your Name**  
-BS Computer Science | C++ & Python Developer  
-[LinkedIn](https://linkedin.com/in/YOUR_HANDLE) · [GitHub](https://github.com/YOUR_USERNAME)
+**Abu Bakkar Zubair**  
+BS Computer Engineering | C++ & Python Developer  
+[LinkedIn](www.linkedin.com/in/abu-bakkar-zubair-4b7bb1227) · [GitHub](https://github.com/AbubakarZubair)
